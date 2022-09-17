@@ -1,12 +1,15 @@
+import Dependent from "./Dependent.js";
 export default class Departament {
-    get sales() {
-        console.log('sales checked');
-        return this._sales;
+    _dependents = [];
+    constructor(name) {
+        this.name = name;
     }
-    set sales(newSale) {
-        if (typeof newSale === 'number') {
-            this._sales = newSale;
-            console.log('sales updated');
+    get dependents() {
+        return this._dependents;
+    }
+    set dependents(newDependent) {
+        if (newDependent instanceof Dependent) {
+            this._dependents.push(newDependent);
         } else {
             console.log('invalid input');
         }

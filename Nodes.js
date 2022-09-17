@@ -1,6 +1,4 @@
-const $ = (query) => {
-    return document.querySelector(query);
-};
+const $ = query => document.querySelector(query);
 
 const complexSection = $('.complex-section');
 const departamentSection = $('.departament-section');

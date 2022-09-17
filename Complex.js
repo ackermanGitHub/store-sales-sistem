@@ -1,12 +1,12 @@
+import Departament from "./Departament.js";
 export default class Complex {
-    get sales() {
-        console.log('sales checked');
-        return this._sales;
+    _departaments = [];
+    get departaments() {
+        return this._departaments;
     }
-    set sales(newSale) {
-        if (typeof newSale === 'number') {
-            this._sales = newSale;
-            console.log('sales updated');
+    set departaments(newDepartament) {
+        if (newDepartament instanceof Departament) {
+            this._departaments.push(newDepartament);
         } else {
             console.log('invalid input');
         }

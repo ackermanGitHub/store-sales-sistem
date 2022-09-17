@@ -19,5 +19,7 @@ e) Diseñe las clases en Java.
 */
 const complexA = new Complex();
 const departamentA = new Departament();
-const dependentA = new Dependent();
+const dependentA = new Dependent('Julio', 20);
+
+dependentA.sales = 23;
 console.log({complexA, departamentA, dependentA});
